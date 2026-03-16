@@ -20,6 +20,19 @@ const ContextDetector = require('../../core/session/context-detector');
 
 const SESSION_STATE_PATH = path.join(process.cwd(), '.aiox', 'session-state.json');
 
+// Lazy-load handoff writer to avoid startup cost when handoffs not needed
+let _handoffWriter = null;
+function getHandoffWriter() {
+  if (!_handoffWriter) {
+    try {
+      _handoffWriter = require('../../core/handoffs/handoff-writer');
+    } catch {
+      // handoffs module not available — graceful degradation
+    }
+  }
+  return _handoffWriter;
+}
+
 /**
  * Agent exit hook - called when command completes
  * @param {string} agent - Agent ID (e.g., 'po', 'dev', 'qa')
@@ -50,10 +63,44 @@ function onCommandComplete(agent, command, result, context) {
         lastAgent: agent,
       },
     }, SESSION_STATE_PATH);
+    // Persist handoff to disk if toAgent is known (Story 9.2)
+    if (context.next_agent) {
+      persistHandoffAsync(agent, context.next_agent, context).catch(() => {});
+    }
   } catch (error) {
     // Graceful degradation - hook failures must not break command execution
     console.warn('[AgentExitHooks] Hook failed:', error.message);
   }
+}
+
+/**
+ * Persists a handoff to disk when an agent switch occurs (Story 9.2).
+ * @param {string} fromAgent
+ * @param {string} toAgent
+ * @param {Object} context
+ * @returns {Promise<void>}
+ */
+async function persistHandoffAsync(fromAgent, toAgent, context) {
+  const writer = getHandoffWriter();
+  if (!writer) return;
+
+  const projectName = writer.resolveProjectName(process.cwd());
+  if (!projectName) return;
+
+  await writer.writeHandoff(
+    {
+      from_agent: fromAgent,
+      to_agent: toAgent,
+      story_id: context.story_path ? path.basename(context.story_path, '.story.md') : 'unknown',
+      story_path: context.story_path || '',
+      branch: context.branch || '',
+      next_action: context.next_action || `continue-from-${fromAgent}`,
+      decisions: context.decisions || [],
+      files_modified: context.files_modified || [],
+      blockers: context.blockers || [],
+    },
+    { projectName },
+  );
 }
 
 /**
@@ -93,4 +140,5 @@ module.exports = {
   onCommandComplete,
   registerHook,
   detectWorkflowState,
+  persistHandoffAsync,
 };

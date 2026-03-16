@@ -1,4 +1,6 @@
 ---
+name: aios-nexus
+description: "Use when configuring MCP servers, integrating new tools, deploying squads to projects, managing .claude/settings.json and rules, or setting up infrastructure for AIOS projects"
 agent:
   name: Nexus
   id: aios-nexus

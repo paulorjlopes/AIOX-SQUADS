@@ -1,4 +1,6 @@
 ---
+name: aios-sentinel
+description: "Use when validating AIOS artifacts against format specs and constitution, running quality gates, auditing framework compliance, checking IDS integrity, or verifying cross-references"
 agent:
   name: Sentinel
   id: aios-sentinel

@@ -1,4 +1,6 @@
 ---
+name: aios-forge
+description: "Use when creating any AIOS artifact — agents, tasks, workflows, skills, squads, templates, checklists, rules, or config files — with perfect format adherence"
 agent:
   name: Forge
   id: aios-forge

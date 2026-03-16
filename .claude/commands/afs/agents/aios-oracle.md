@@ -1,4 +1,6 @@
 ---
+name: aios-oracle
+description: "Use when coordinating cross-agent operations, routing work between Forge Squad agents, managing complex multi-step framework operations, or maintaining holistic framework context"
 agent:
   name: Oracle
   id: aios-oracle

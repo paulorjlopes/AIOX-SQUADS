@@ -1,4 +1,6 @@
 ---
+name: aios-catalyst
+description: "Use when optimizing AIOS components for token reduction, improving performance, refactoring for modern patterns, running AgentDropout to eliminate redundancy, or modernizing legacy components"
 agent:
   name: Catalyst
   id: aios-catalyst

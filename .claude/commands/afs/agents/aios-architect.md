@@ -1,4 +1,6 @@
 ---
+name: aios-architect
+description: "Use when designing architectural improvements, analyzing impact of changes across AIOS layers, planning modernization of subsystems, or making technology decisions for the framework"
 agent:
   name: Architect
   id: aios-architect

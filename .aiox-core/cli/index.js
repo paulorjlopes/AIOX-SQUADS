@@ -23,6 +23,9 @@ const { createGenerateCommand } = require('./commands/generate');
 const { createMetricsCommand } = require('./commands/metrics');
 const { createConfigCommand } = require('./commands/config');
 const { createProCommand } = require('./commands/pro');
+const { createHubCommand } = require('./commands/hub');
+const { createHandoffsCommand } = require('./commands/handoffs');
+const { createWatchCommand } = require('./commands/watch');
 
 // Read package.json for version
 const packageJsonPath = path.join(__dirname, '..', '..', 'package.json');
@@ -123,6 +126,15 @@ Examples:
 
   // Add pro command (Story PRO-6)
   program.addCommand(createProCommand());
+
+  // Add hub command (Story 9.1)
+  program.addCommand(createHubCommand());
+
+  // Add handoffs command (Story 9.2)
+  program.addCommand(createHandoffsCommand());
+
+  // Add watch command (Story 9.3)
+  program.addCommand(createWatchCommand());
 
   return program;
 }

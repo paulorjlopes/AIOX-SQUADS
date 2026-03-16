@@ -49,9 +49,11 @@ components:
     - review.md
     - scale-campaign.md
     - setup-tracking.md
+    - validate-tracking.md
   workflows:
     - wf-account-audit.yaml
     - wf-campaign-launch.yaml
+    - wf-validate-tracking.yaml
   checklists:
     - output-quality.md
 

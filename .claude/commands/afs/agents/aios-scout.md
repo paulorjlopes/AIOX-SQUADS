@@ -1,4 +1,6 @@
 ---
+name: aios-scout
+description: "Use when researching Claude Code updates, searching for best practices, monitoring the AIOS ecosystem, self-updating the squad knowledge base, or verifying current datetime"
 agent:
   name: Scout
   id: aios-scout

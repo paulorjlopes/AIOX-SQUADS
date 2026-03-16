@@ -27,3 +27,19 @@ Thumbs.db
 .aiox-core/local/
 .claude/settings.local.json
 .aiox/install-log.txt
+
+# WordPress MCP — credenciais reais (não commitar)
+tools/wordpress-mcp/wp-sites.json
+
+# MCP Config — contém tokens sensíveis
+.mcp.json
+
+# Google/GTM Credentials
+tools/gtm-mcp/credentials/
+
+# Meta Ads — contas com tokens reais
+tools/meta-ads-mcp/accounts.json
+
+# Next.js build (squads)
+squads/**/.next/
+**/.next/

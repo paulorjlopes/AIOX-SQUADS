@@ -1,3 +1,16 @@
 {
-  "language": "portuguese"
+  "language": "portuguese",
+  "permissions": {
+    "allow": [
+      "Bash(curl -s * graph.facebook.com*)",
+      "Bash(curl -s * graph.facebook.com/*/adimages*)",
+      "Bash(curl -s * graph.facebook.com/*/adcreatives*)",
+      "mcp__meta-ads__*",
+      "mcp__google-ads__*",
+      "mcp__gtm__*",
+      "mcp__stape__*",
+      "mcp__wordpress__*",
+      "mcp__playwright__*"
+    ]
+  }
 }

@@ -17,6 +17,7 @@ const AioxDirectoryCheck = require('./aiox-directory');
 const AgentConfigCheck = require('./agent-config');
 const TaskDefinitionsCheck = require('./task-definitions');
 const WorkflowDependenciesCheck = require('./workflow-dependencies');
+const GlobalHubCheck = require('./global-hub');
 
 /**
  * All project domain checks
@@ -30,4 +31,5 @@ module.exports = {
   AgentConfigCheck,
   TaskDefinitionsCheck,
   WorkflowDependenciesCheck,
+  GlobalHubCheck,
 };
