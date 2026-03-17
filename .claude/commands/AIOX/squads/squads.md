@@ -19,15 +19,15 @@ Ative um squad com o comando `/AIOX:squads:{squad-name}` ou `@squad-name`.
 | 3 | **Copy Squad** | 23 | Copywriting elite (Halbert, Schwartz, Ogilvy, Brunson...) | `/AIOX:squads:copy-squad` |
 | 4 | **Brand Squad** | 15 | Estratégia de marca (Aaker, Al Ries...) | `/AIOX:squads:brand-squad` |
 | 5 | **Data Squad** | 7 | Analytics & Growth (Kaushik, Fader, Ellis...) | `/AIOX:squads:data-squad` |
-| 6 | **Design Squad** | 8 | Design systems & UX (Brad Frost, Dan Mall...) | `/AIOX:squads:design-squad` |
-| 7 | **Cybersecurity Squad** | 15 | Pentest, Red/Blue Team, AppSec | `/AIOX:squads:cybersecurity` |
-| 8 | **Hormozi Squad** | 16 | Frameworks Hormozi (Offers, Leads, Pricing, Scaling) | `/AIOX:squads:hormozi-squad` |
-| 9 | **Movement Squad** | 7 | Construção de movimentos sociais | `/AIOX:squads:movement` |
-| 10 | **Storytelling Squad** | 12 | Narrativa (Campbell, Harmon, Snyder...) | `/AIOX:squads:storytelling` |
-| 11 | **Traffic Masters** | 16 | Tráfego pago (Facebook, YouTube, Google) | `/AIOX:squads:traffic-masters` |
-| 12 | **Claude Code Mastery** | 8 | Domínio total do Claude Code (Hooks, MCP, Skills...) | `/AIOX:squads:claude-code-mastery` |
-| 13 | **AIOS Forge Squad** | 7 | Criação, validação, otimização e evolução de artefatos AIOS | `/AIOX:squads:aios-forge-squad` |
-| 14 | **Psych Squad** | 10 | Psicologia, Psiquiatria & Psicanálise (Jung, Freud, Beck, Rogers, Yalom, Kahneman, Maté, Linehan, Lacan) | `/AIOX:squads:psych-squad` |
+| 6 | **Cybersecurity Squad** | 15 | Pentest, Red/Blue Team, AppSec | `/AIOX:squads:cybersecurity` |
+| 7 | **Hormozi Squad** | 16 | Frameworks Hormozi (Offers, Leads, Pricing, Scaling) | `/AIOX:squads:hormozi-squad` |
+| 8 | **Movement Squad** | 7 | Construção de movimentos sociais | `/AIOX:squads:movement` |
+| 9 | **Storytelling Squad** | 12 | Narrativa (Campbell, Harmon, Snyder...) | `/AIOX:squads:storytelling` |
+| 10 | **Traffic Masters** | 16 | Tráfego pago (Facebook, YouTube, Google) | `/AIOX:squads:traffic-masters` |
+| 11 | **Claude Code Mastery** | 8 | Domínio total do Claude Code (Hooks, MCP, Skills...) | `/AIOX:squads:claude-code-mastery` |
+| 12 | **AIOS Forge Squad** | 7 | Criação, validação, otimização e evolução de artefatos AIOS | `/AIOX:squads:aios-forge-squad` |
+| 13 | **Psych Squad** | 10 | Psicologia, Psiquiatria & Psicanálise (Jung, Freud, Beck, Rogers, Yalom, Kahneman, Maté, Linehan, Lacan) | `/AIOX:squads:psych-squad` |
+| 14 | **WebCraft Squad** | 15 | Web Excellence unificado — Design Systems, UX/UI, DesignOps, Performance, A11y, SEO, GEO (Brad Frost, Dan Mall, Dave Malouf + 8 web experts + 3 specialists) | `/AIOX:squads:webcraft-squad` |
 
 ---
 
@@ -45,7 +45,7 @@ Ative um squad com o comando `/AIOX:squads:{squad-name}` ou `@squad-name`.
 - `/AIOX:squads:traffic-masters` — Tráfego pago e mídia
 
 ### Produto & Design
-- `/AIOX:squads:design-squad` — Design systems e UX/UI
+- `/AIOX:squads:webcraft-squad` — Web Excellence: design systems, UX/UI, DesignOps, performance, a11y, SEO & GEO
 - `/AIOX:squads:storytelling` — Narrativa de produto e pitch
 
 ### Engenharia & Segurança
@@ -72,12 +72,12 @@ squads/xquads-squads/
 ├── copy-squad/
 ├── cybersecurity/
 ├── data-squad/
-├── design-squad/
 ├── hormozi-squad/
 ├── movement/
 ├── psych-squad/
 ├── storytelling/
-└── traffic-masters/
+├── traffic-masters/
+└── webcraft-squad/
 ```
 
 Cada squad contém: `squad.yaml`, `agents/`, `tasks/`, `workflows/`, `checklists/`, `config/`
