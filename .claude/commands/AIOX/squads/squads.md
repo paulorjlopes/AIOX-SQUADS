@@ -27,6 +27,7 @@ Ative um squad com o comando `/AIOX:squads:{squad-name}` ou `@squad-name`.
 | 11 | **Traffic Masters** | 16 | Tráfego pago (Facebook, YouTube, Google) | `/AIOX:squads:traffic-masters` |
 | 12 | **Claude Code Mastery** | 8 | Domínio total do Claude Code (Hooks, MCP, Skills...) | `/AIOX:squads:claude-code-mastery` |
 | 13 | **AIOS Forge Squad** | 7 | Criação, validação, otimização e evolução de artefatos AIOS | `/AIOX:squads:aios-forge-squad` |
+| 14 | **Psych Squad** | 10 | Psicologia, Psiquiatria & Psicanálise (Jung, Freud, Beck, Rogers, Yalom, Kahneman, Maté, Linehan, Lacan) | `/AIOX:squads:psych-squad` |
 
 ---
 
@@ -52,6 +53,9 @@ Ative um squad com o comando `/AIOX:squads:{squad-name}` ou `@squad-name`.
 - `/AIOX:squads:claude-code-mastery` — Maestria em Claude Code
 - `/AIOX:squads:aios-forge-squad` — Criação e evolução de artefatos AIOS
 
+### Saude Mental & Comportamento Humano
+- `/AIOX:squads:psych-squad` — Psicologia, Psiquiatria, Psicanalise e analise de sessoes
+
 ### Movimento & Comunidade
 - `/AIOX:squads:movement` — Construção de movimento e identidade
 
@@ -71,6 +75,7 @@ squads/xquads-squads/
 ├── design-squad/
 ├── hormozi-squad/
 ├── movement/
+├── psych-squad/
 ├── storytelling/
 └── traffic-masters/
 ```
